@@ -1,0 +1,12 @@
+server:
+  port: 8001
+
+spring:
+  profiles:
+    active: dev
+  redis:
+    database: ${REDIS_DB:0}
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 5000
