@@ -37,5 +37,6 @@ public class AppTest
         System.out.println(userMapper);
 //        User user = userMapper.selectByPrimaryKey(1L);
 //        System.out.println(user);
+
     }
 }

@@ -2,7 +2,6 @@ package com.jhua.dao;
 
 import com.jhua.model.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Component;
 
 @Mapper
 public interface UserMapper {

@@ -7,10 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="supercharge-system" />
-        <module name="eladmin-common" />
-        <module name="eladmin-logging" />
         <module name="supercharge-generator" />
-        <module name="eladmin-tools" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
