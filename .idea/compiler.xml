@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="supercharge-system" />
         <module name="supercharge-generator" />
+        <module name="supercharge-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,7 +16,8 @@
       <module name="eladmin-logging" target="1.8" />
       <module name="eladmin-tools" target="1.8" />
       <module name="supercharge" target="1.8" />
-      <module name="supercharge-generator" target="1.7" />
+      <module name="supercharge-core" target="8" />
+      <module name="supercharge-generator" target="8" />
       <module name="supercharge-system" target="8" />
     </bytecodeTargetLevel>
   </component>
@@ -27,6 +28,7 @@
       <module name="eladmin-logging" options="-parameters" />
       <module name="eladmin-tools" options="-parameters" />
       <module name="supercharge" options="-parameters" />
+      <module name="supercharge-core" options="-parameters" />
       <module name="supercharge-generator" options="-parameters" />
       <module name="supercharge-system" options="-parameters" />
     </option>

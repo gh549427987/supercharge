@@ -1,6 +1,0 @@
-# Project exclude paths
-/eladmin-common/target/
-/eladmin-logging/target/
-/eladmin-tools/target/
-/supercharge-generator/target/
-/supercharge-system/target/
