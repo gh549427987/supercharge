@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/supercharge.iml" filepath="$PROJECT_DIR$/supercharge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supercharge-common/supercharge-common.iml" filepath="$PROJECT_DIR$/supercharge-common/supercharge-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/supercharge-core/supercharge-core.iml" filepath="$PROJECT_DIR$/supercharge-core/supercharge-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/supercharge-generator/supercharge-generator.iml" filepath="$PROJECT_DIR$/supercharge-generator/supercharge-generator.iml" />
     </modules>

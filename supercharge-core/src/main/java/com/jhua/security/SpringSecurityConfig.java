@@ -1,4 +1,4 @@
-package com.jhua.config;
+package com.jhua.security;
 
 /**
  * @author jhua

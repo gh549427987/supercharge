@@ -1,4 +1,4 @@
-package com.jhua.config.bean;
+package com.jhua.security;
 
 /**
  * 验证码配置枚举

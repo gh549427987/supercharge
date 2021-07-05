@@ -1,4 +1,6 @@
-package com.jhua.config.bean;
+package com.jhua.security;
+
+import lombok.Data;
 
 /**
  * 登录验证码配置信息
@@ -7,6 +9,7 @@ package com.jhua.config.bean;
  * @date 2021/7/4
  * @time 9:28 PM
  */
+@Data
 public class LoginCode {
 
     /**
@@ -44,8 +47,8 @@ public class LoginCode {
      */
     private int fontSize = 25;
 
-    public LoginCodeEnum getCodeType() {
-        return codeType;
-    }
+//    public LoginCodeEnum getCodeType() {
+//        return codeType;
+//    }
 
 }

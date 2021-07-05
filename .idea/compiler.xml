@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="supercharge-generator" />
         <module name="supercharge-core" />
+        <module name="supercharge-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="eladmin-logging" target="1.8" />
       <module name="eladmin-tools" target="1.8" />
       <module name="supercharge" target="1.8" />
+      <module name="supercharge-common" target="8" />
       <module name="supercharge-core" target="8" />
       <module name="supercharge-generator" target="8" />
       <module name="supercharge-system" target="8" />
@@ -28,6 +30,7 @@
       <module name="eladmin-logging" options="-parameters" />
       <module name="eladmin-tools" options="-parameters" />
       <module name="supercharge" options="-parameters" />
+      <module name="supercharge-common" options="-parameters" />
       <module name="supercharge-core" options="-parameters" />
       <module name="supercharge-generator" options="-parameters" />
       <module name="supercharge-system" options="-parameters" />
