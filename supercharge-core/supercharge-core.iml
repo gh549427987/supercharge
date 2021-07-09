@@ -11,7 +11,15 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="SpringSecurityConfig" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/jhua/security/SpringSecurityConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/jhua/SuperChargeApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/jhua/security/config/SpringSecurityConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/jhua/security/config/SpringSecurityConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/jhua/config/SpringSecurityConfig.java</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
@@ -161,5 +169,6 @@
     <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.04" level="project" />
     <orderEntry type="library" name="Maven: xerces:xercesImpl:2.12.0" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.70" level="project" />
   </component>
 </module>

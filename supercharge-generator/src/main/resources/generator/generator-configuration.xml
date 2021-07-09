@@ -29,7 +29,7 @@
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
             <property name="constructorBased" value="true" />
-            <property name="exampleTargetPackage" value="com.jhua.example" />
+            <property name="exampleTargetPackage" value="com.jhua.dao.example" />
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mappers"  targetProject="C:\Users\wb.xiejiehua\IdeaProjects\OpenSource\supercharge\supercharge-generator\src\main/resources">
@@ -57,6 +57,30 @@
                tableName="sequence"
                domainObjectName="Sequence"
                mapperName="SequenceMapper">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="ID" sqlStatement="DB2" identity="true" />
+            <columnOverride column="DATE_FIELD" property="startDate" />
+            <ignoreColumn column="FRED" />
+            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+        </table>
+
+        <table schema="supercharge"
+               selectByPrimaryKeyQueryId="true"
+               tableName="sys_menu"
+               domainObjectName="Menu"
+               mapperName="MenuMapper">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="ID" sqlStatement="DB2" identity="true" />
+            <columnOverride column="DATE_FIELD" property="startDate" />
+            <ignoreColumn column="FRED" />
+            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+        </table>
+
+        <table schema="supercharge"
+               selectByPrimaryKeyQueryId="true"
+               tableName="sys_role"
+               domainObjectName="Role"
+               mapperName="RoleMapper">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="ID" sqlStatement="DB2" identity="true" />
             <columnOverride column="DATE_FIELD" property="startDate" />

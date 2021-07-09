@@ -1,4 +1,4 @@
-package com.jhua.example;
+package com.jhua.dao.example;
 
 import java.util.ArrayList;
 import java.util.Date;

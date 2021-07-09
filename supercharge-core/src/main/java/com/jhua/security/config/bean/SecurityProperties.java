@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.jhua.security;
+package com.jhua.security.config.bean;
 
 import lombok.Data;
 

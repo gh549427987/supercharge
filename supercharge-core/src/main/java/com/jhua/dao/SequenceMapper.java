@@ -1,6 +1,6 @@
 package com.jhua.dao;
 
-import com.jhua.example.SequenceExample;
+import com.jhua.dao.example.SequenceExample;
 import com.jhua.model.Sequence;
 import org.apache.ibatis.annotations.Param;
 
