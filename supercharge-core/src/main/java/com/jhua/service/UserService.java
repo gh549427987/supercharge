@@ -23,6 +23,16 @@ public interface UserService {
      * @Param [userName]
      * @return com.jhua.service.dto.UserDto
      **/
-    UserDto findByName(String userName);
+    User findByName(String userName);
+
+    /*
+     * @Author xiejiehua
+     * @Description //TODO
+     * @Date  7/15/2021
+     * @Param 
+     * @return 
+     **/
+    UserDto findDtoByName(String userName);
+
 }
 

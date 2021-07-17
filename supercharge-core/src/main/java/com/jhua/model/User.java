@@ -1,5 +1,8 @@
 package com.jhua.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -163,8 +166,8 @@ public class User implements Serializable {
         this.is_admin = is_admin;
     }
 
-    public Long getEnabled() {
-        return enabled;
+    public boolean getEnabled() {
+        return enabled.equals(1);
     }
 
     public void setEnabled(Long enabled) {

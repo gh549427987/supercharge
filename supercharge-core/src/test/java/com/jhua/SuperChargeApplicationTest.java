@@ -1,6 +1,8 @@
 package com.jhua;
 
 import com.jhua.dao.UserMapper;
+import com.jhua.model.User;
+import com.jhua.service.dto.UserDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -36,5 +38,7 @@ class SuperChargeApplicationTest {
     @Test
     void test_01() {
         System.out.println(userMapper);
+        UserDto admin = userMapper.selectDtoByUsername("admin");
+        System.out.println(admin.toString());
     }
 }

@@ -15,6 +15,7 @@
  */
 package com.jhua.security.service;
 
+import com.jhua.model.User;
 import lombok.RequiredArgsConstructor;
 import com.jhua.common.exception.BadRequestException;
 import com.jhua.common.exception.EntityNotFoundException;
@@ -70,7 +71,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (searchDb) {
             UserDto user;
             try {
-                user = userService.findByName(username);
+                user = userService.findDtoByName(username);
             } catch (EntityNotFoundException e) {
                 // SpringSecurity会自动转换UsernameNotFoundException为BadCredentialsException
                 throw new UsernameNotFoundException("", e);

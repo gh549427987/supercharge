@@ -1,5 +1,7 @@
 package com.jhua.service.impl;
 
+import com.jhua.common.base.BaseMapper;
+import com.jhua.common.exception.EntityNotFoundException;
 import com.jhua.dao.UserMapper;
 import com.jhua.model.User;
 import com.jhua.service.UserService;
@@ -25,7 +27,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto findByName(String userName) {
-        return null;
+    public User findByName(String userName) {
+        User userDto = userMapper.selectByUsername(userName);
+        System.out.println(userDto.toString());
+        if (userDto == null) {
+            throw new EntityNotFoundException(User.class, "name", userName);
+        } else {
+            return userDto;
+        }
+    }
+
+    @Override
+    public UserDto findDtoByName(String userName) {
+        UserDto userDto = userMapper.selectDtoByUsername(userName);
+        System.out.println(userDto.toString());
+        if (userDto == null) {
+            throw new EntityNotFoundException(User.class, "name", userName);
+        } else {
+            return userDto;
+        }
     }
 }

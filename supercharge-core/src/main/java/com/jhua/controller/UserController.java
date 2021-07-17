@@ -1,6 +1,7 @@
 package com.jhua.controller;
 
 import cn.hutool.core.util.IdUtil;
+import com.jhua.common.annotation.rest.AnonymousDeleteMapping;
 import com.jhua.common.annotation.rest.AnonymousGetMapping;
 import com.jhua.common.annotation.rest.AnonymousPostMapping;
 import com.jhua.common.config.RsaProperties;
@@ -8,6 +9,7 @@ import com.jhua.common.exception.BadRequestException;
 import com.jhua.common.utils.RedisUtils;
 import com.jhua.common.utils.RsaUtils;
 import com.jhua.common.utils.StringUtils;
+import com.jhua.model.User;
 import com.jhua.security.TokenProvider;
 import com.jhua.security.config.bean.LoginCodeEnum;
 import com.jhua.security.config.bean.LoginProperties;
@@ -20,6 +22,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -59,6 +63,11 @@ public class UserController {
 
     @Resource
     private LoginProperties loginProperties;
+
+    @Operation(summary = "创建角色")
+    public ResponseEntity<Object> createUser(User user) {
+        return null;
+    }
 
     @Operation(summary = "登录功能")
     @AnonymousPostMapping(value = "/login")
@@ -136,4 +145,10 @@ public class UserController {
 
     }
 
+    @Operation(summary = "退出功能")
+    @AnonymousDeleteMapping(value = "/logout")
+    public ResponseEntity<Object> logout(HttpServletRequest httpServletRequest) {
+        onlineUserService.logout(tokenProvider.getToken(httpServletRequest));
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

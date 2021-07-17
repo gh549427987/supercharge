@@ -78,12 +78,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        System.out.println("cknima");
         // 搜寻匿名标记 url： @AnonymousAccess
         RequestMappingHandlerMapping requestMappingHandlerMapping = (RequestMappingHandlerMapping) applicationContext.getBean("requestMappingHandlerMapping");
         Map<RequestMappingInfo, HandlerMethod> handlerMethodMap = requestMappingHandlerMapping.getHandlerMethods();
         // 获取匿名标记
         Map<String, Set<String>> anonymousUrls = getAnonymousUrl(handlerMethodMap);
+
         httpSecurity
                 // 禁用 CSRF
                 .csrf().disable()

@@ -66,9 +66,6 @@ public class ConfigurerAdapter implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         FileProperties.ElPath path = properties.getPath();
-        System.out.println(properties.getPath());
-        System.out.println(properties.toString());
-        System.out.println(path.toString());
         String avatarUtl = "file:" + path.getAvatar().replace("\\","/");
         String pathUtl = "file:" + path.getPath().replace("\\","/");
         registry.addResourceHandler("/avatar/**").addResourceLocations(avatarUtl).setCachePeriod(0);
