@@ -122,8 +122,6 @@ public class UserController {
         Captcha captcha = loginProperties.getCaptcha();
         String uuid = properties.getCodeKey() + IdUtil.simpleUUID();
 
-        System.out.println(captcha.toString());
-
         //当验证码类型为 arithmetic时且长度 >= 2 时，captcha.text()的结果有几率为浮点型
         String captchaValue = captcha.text();
         if (captcha.getCharType() - 1 == LoginCodeEnum.arithmetic.ordinal() && captchaValue.contains(".")) {
@@ -139,10 +137,7 @@ public class UserController {
             put("uuid", uuid);
         }};
 
-        System.out.println(imgResult);
         return ResponseEntity.ok(imgResult);
-
-
     }
 
     @Operation(summary = "退出功能")

@@ -24,8 +24,11 @@
       <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
+
   <resultMap id="DtoResultMap" type="com.jhua.service.dto.UserDto">
+
     <result column="dept_id" jdbcType="BIGINT" property="deptId"/>
+
     <result column="username" jdbcType="VARCHAR" property="username"/>
     <result column="nick_name" jdbcType="BIGINT" property="nickName"/>
     <result column="email" jdbcType="BIGINT" property="email"/>
@@ -37,18 +40,38 @@
     <result column="enabled" jdbcType="BIGINT" property="enabled"/>
     <result column="is_admin" jdbcType="BIGINT" property="isAdmin"/>
     <result column="pwd_reset_time" jdbcType="BIGINT" property="pwdResetTime"/>
+
+    <collection property="roles" ofType="com.jhua.service.dto.RoleSmallDto">
+      <id column="role_id" property="id"/>
+      <result column="name" property="name"/>
+      <result column="level" property="level"/>
+      <result column="data_scope" property="dataScope"/>
+    </collection>
+
+    <collection property="jobs" ofType="com.jhua.service.dto.JobSmallDto">
+      <id column="dept_id" property="id"/>
+      <result column="name" property="name"/>
+    </collection>
+
   </resultMap>
+
   <sql id="Base_Column_List">
     id, user_id, dept_id, username, nickname, gender, phone, email, avatar_name, avatar_path, 
     password, is_admin, enabled, create_by, update_by, pwd_reset_time, create_time, update_time
   </sql>
+
   <select id="selectByUsername" resultMap="BaseResultMap">
     select * from user
     where username = #{username}
   </select>
   <select id="selectDtoByUsername" resultMap="DtoResultMap">
-    select * from sys_user
-    where username = #{username}
+
+    select *
+    from sys_user
+           left join sys_users_roles sur on sys_user.user_id = sur.user_id
+           left join sys_role sr on sur.role_id = sr.role_id
+    where username = #{username};
+
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 'false' as QUERYID,
